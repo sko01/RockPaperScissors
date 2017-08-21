@@ -22,7 +22,7 @@ public class RPSGameEngine implements GameEngine{
     @Override
     public Result getResult(Variants player1, Variants player2) {
         if(player1 == player2) return Result.DRAW;
-        else if (player1.isBetterThen(player2)) return Result.WIN;
+        else if (player1.isBetterThan(player2)) return Result.WIN;
         else return Result.LOOSE;
     }
 

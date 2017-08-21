@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GameTest {
+    private static String NOT_CONTINUE = "n";
     private Player playerOne;
     private Player playerTwo;
     private Map<String, Integer> score;
@@ -80,8 +81,9 @@ public class GameTest {
         when(gameEngine.getChoiceList()).thenReturn(Arrays.asList(Variants.values()));
         when(gameEngine.getResult(any(), any())).thenReturn(Result.WIN);
         when(playerMock.makeChoice(any())).thenReturn(Variants.PAPER);
-        when(playerMock.getName()).thenReturn("Player 1");
-        ByteArrayInputStream in = new ByteArrayInputStream("n".getBytes());
+        when(playerMock.getName()).thenReturn(playerOne.getName());
+
+        ByteArrayInputStream in = new ByteArrayInputStream(NOT_CONTINUE.getBytes());
         System.setIn(in);
 
         int scoreBefore = score.get(playerOne.getName());
@@ -99,8 +101,9 @@ public class GameTest {
         when(gameEngine.getChoiceList()).thenReturn(Arrays.asList(Variants.values()));
         when(gameEngine.getResult(any(), any())).thenReturn(Result.LOOSE);
         when(playerMock.makeChoice(any())).thenReturn(Variants.PAPER);
-        when(playerMock.getName()).thenReturn("Player 1");
-        ByteArrayInputStream in = new ByteArrayInputStream("n".getBytes());
+        when(playerMock.getName()).thenReturn(playerOne.getName());
+
+        ByteArrayInputStream in = new ByteArrayInputStream(NOT_CONTINUE.getBytes());
         System.setIn(in);
 
         int scoreBefore = score.get(playerTwo.getName());
@@ -118,8 +121,9 @@ public class GameTest {
         when(gameEngine.getChoiceList()).thenReturn(Arrays.asList(Variants.values()));
         when(gameEngine.getResult(any(), any())).thenReturn(Result.DRAW);
         when(playerMock.makeChoice(any())).thenReturn(Variants.PAPER);
-        when(playerMock.getName()).thenReturn("Player 1");
-        ByteArrayInputStream in = new ByteArrayInputStream("n".getBytes());
+        when(playerMock.getName()).thenReturn(playerOne.getName());
+
+        ByteArrayInputStream in = new ByteArrayInputStream(NOT_CONTINUE.getBytes());
         System.setIn(in);
 
         int scoreBeforePlayerOne = score.get(playerMock.getName());

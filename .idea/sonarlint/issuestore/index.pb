@@ -13,3 +13,5 @@ r
 Bsrc/test/java/ua/lviv/sko01/rockpaperscissors/models/GameTest.java,e/d/ed94d61bc50cedb3b0af5b98c4b33707e63b25c0
 p
 @src/main/java/ua/lviv/sko01/rockpaperscissors/models/Result.java,5/8/58f92d86c5692247981cc613ab7e1fca85aeba1c
+r
+Bsrc/main/java/ua/lviv/sko01/rockpaperscissors/models/Variants.java,3/a/3a83eef87f6b4623d6a3b84f433369641efef21e

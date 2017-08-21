@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ConsoleUtils {
     private static final Logger LOG = LoggerFactory.getLogger(ConsoleUtils.class);
 
-    public static boolean getCreateNewGameInput(InputStream in, String msg) {
+    public static boolean isContinueGame(InputStream in, String msg) {
         Scanner sc = new Scanner(in);
         while(true) {
             LOG.info(msg);

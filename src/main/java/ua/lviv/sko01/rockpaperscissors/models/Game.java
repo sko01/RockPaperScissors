@@ -62,7 +62,7 @@ public class Game {
         boolean newRound = true;
         while(newRound) {
             startRound();
-            newRound = ConsoleUtils.getCreateNewGameInput(System.in, Constants.CREATE_NEW_ROUND_MSG);
+            newRound = ConsoleUtils.isContinueGame(System.in, Constants.CREATE_NEW_ROUND_MSG);
         }
     }
 

@@ -24,7 +24,7 @@ public class GameServiceImpl implements GameService {
         while(newGame) {
             Game game = gameBuilder.buildGame();
             game.playGame();
-            newGame = ConsoleUtils.getCreateNewGameInput(System.in, Constants.CREATE_NEW_GAME_MSG);
+            newGame = ConsoleUtils.isContinueGame(System.in, Constants.CREATE_NEW_GAME_MSG);
         }
     }
 }
