@@ -17,6 +17,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HumanPlayerTest {
+    private static String FIRST_VARIANT = "1";
     private static String NAME = "Demo";
 
     @InjectMocks
@@ -35,7 +36,7 @@ public class HumanPlayerTest {
     public void testMakeChoiceShouldReturnSelectedOption() {
         List<Variants> variants = Arrays.asList(Variants.values());
         when(engine.getChoiceList()).thenReturn(variants);
-        ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
+        ByteArrayInputStream in = new ByteArrayInputStream(FIRST_VARIANT.getBytes());
         System.setIn(in);
         Variants choice = player.makeChoice(engine.getChoiceList());
         assertEquals("Selected option should be returned", variants.get(0), choice);
